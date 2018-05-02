@@ -7,7 +7,7 @@
 void printSolution(int color[], int V);
 
 /*
-    IS: Diterima matriks dari status ketetanggaan graf, larik warna dari setiap vertex,
+    IS: Diterima matriks dari status ketetanggaan suatu vertex, larik warna dari setiap vertex,
         warna yang akan dimasukkan, dan jumlah Vertex pada graf
     FS: Mengembalikan true apabila vertex dapat diisi dengan warna c dan false untuk sebaliknya
 
@@ -21,7 +21,7 @@ bool isSafe (int v, bool graph[][M], int color[], int c, int V)
 }
 
 /*
-    IS: Diterima matriks dari status ketetanggaan graf, index vertex yang akan dicek,
+    IS: Diterima matriks dari status ketetanggaan suatu vertex, index vertex yang akan dicek,
         indeks awal dari vertex tetangga, dan jumlah Vertex pada graf
     FS: Mengembalikan jumlah tetangga dari vertex ke-v
 
@@ -39,7 +39,7 @@ int countAdjacent(bool graph[][M], int v, int i, int V)
 }
 
 /*
-    IS: Diterima matriks dari status ketetanggaan graf, larik warna pada seluruh vertex,
+    IS: Diterima matriks dari status ketetanggaan suatu vertex, larik warna pada seluruh vertex,
         dan jumlah Vertex pada graf
     FS: Mengembalikan index vertex yang belum diwarnai dan memiliki tetangga paling banyak
 
@@ -63,7 +63,7 @@ int maxAdjacent (bool graph[][M], int color[], int V)
 }
 
 /*
-    IS: Diterima matriks dari status ketetanggaan graf, jumlah warna yang tersedia,
+    IS: Diterima matriks dari status ketetanggaan suatu vertex, jumlah warna yang tersedia,
         larik warna pada seluruh vertex, dan jumlah Vertex pada graf
     FS: Mengembalikan true apabila seluruh vertex telah diwarnai, dan mengembalikan false
         apabila ada vertex yang tidak dapat diwarnai atau warna yang tersedia telah habis
@@ -94,12 +94,12 @@ bool graphColoringUtil(bool graph[][M], int m, int color[], int colored, int V)
 
     }
 
-    /* Jika tidak ada warna yang dapat diberikan ke vertex ini maka akan return false */
+    /* Jika tidak ada warna yang dapat diberikan ke suatu vertex ini maka akan return false */
     return false;
 }
 
 /*
-    IS: 1.Diterima matriks dari status ketetanggaan graf, jumlah warna yang tersedia,
+    IS: 1.Diterima matriks dari status ketetanggaan suatu vertex, jumlah warna yang tersedia,
         dan jumlah Vertex pada graf
         2. Larik warna untuk setiap vertex di inisialisasi dengan nilai 0
     FS: Menampilkan seluruh elemen pada larik warna sebagai solusi dari permasalahan program
